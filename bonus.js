@@ -21,13 +21,11 @@ function totalVideosDuration(channel) {
  ****************************************************************/
 function channelWithMostContent(channels) {
   var element = []
-  //channels.map((element, index) => console.log(totalVideosDuration(channels[index])))
   for (let index = 0; index < channels.length; index++) {
     element.push(totalVideosDuration(channels[index]))
   }
   return channels[element.indexOf(Math.max(...element))]
 }
-//console.log(channels.forEach((element, index) => console.log(`channels[${index}]`)))
 
 /**************************************************************
  * longestChannelName(channels):
@@ -39,7 +37,6 @@ function channelWithMostContent(channels) {
 function longestChannelName(channels) {
   var element =[]
   element = channels.map(element => element.name.length)
-
   return channels[element.indexOf(Math.max(...element))]
 }
 
